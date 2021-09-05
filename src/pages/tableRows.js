@@ -5,44 +5,48 @@ export const tableConstants = (handleEdit) => {
   return [
     {
       title: 'ID',
-      render: rowData => {
+      render: (rowData) => {
         return <span>{rowData.id}</span>;
       },
     },
     {
       title: 'Name',
-      render: rowData => {
+      render: (rowData) => {
         return <span>{rowData.name}</span>;
       },
     },
     {
       title: 'Username',
-      render: rowData => {
+      render: (rowData) => {
         return <span>{rowData.username}</span>;
       },
     },
     {
       title: 'Email',
-      render: rowData => {
+      render: (rowData) => {
         return <span>{rowData.email}</span>;
       },
     },
     {
       title: 'Phone',
-      render: rowData => {
+      render: (rowData) => {
         return <span>{rowData.phone}</span>;
       },
     },
     {
       title: 'Website',
-      render: rowData => {
+      render: (rowData) => {
         return <span>{rowData.website}</span>;
       },
     },
     {
       title: 'Action',
-      render: rowData => {
-        return <button className='btn btn-warning' onClick={handleEdit(rowData)}>Edit</button>
+      render: (rowData) => {
+        return (
+          <button className="btn btn-warning" onClick={handleEdit(rowData)}>
+            Edit
+          </button>
+        );
       },
     },
   ];
